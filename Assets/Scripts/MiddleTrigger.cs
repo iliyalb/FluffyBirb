@@ -19,6 +19,9 @@ public class MiddleTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        scoreManager.increaseScore();
+        if (collision.gameObject.layer == 3)
+        {
+            scoreManager.increaseScore(1);
+        }
     }
 }

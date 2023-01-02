@@ -9,20 +9,20 @@ public class ScoreManager : MonoBehaviour
     public Text textObject;
     // Start is called before the first frame update
     void Start()
-    {  
+    {
         textObject.text = "Score: 0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     [ContextMenu("Add Score")]
-    public void increaseScore()
+    public void increaseScore(int amount = 1)
     {
-        levelScore++;
+        levelScore += amount;
         textObject.text = "Score: " + levelScore;
     }
 }
