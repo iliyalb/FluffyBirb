@@ -9,7 +9,7 @@ public class Spike : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.AddComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -18,4 +18,11 @@ public class Spike : MonoBehaviour
         transform.position += (Vector3.right * scrollSpeed) * Time.deltaTime;
         scrollSpeed += Time.deltaTime;
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
+    
 }
