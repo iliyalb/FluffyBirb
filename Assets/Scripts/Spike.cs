@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
-    public float scrollSpeed = 5;
+    public static float scrollSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +16,6 @@ public class Spike : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3.right * scrollSpeed) * Time.deltaTime;
+        scrollSpeed += Time.deltaTime;
     }
 }
